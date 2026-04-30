@@ -5,13 +5,13 @@ const values = [
     icon: Award,
     title: "Quality First",
     description:
-      "Every cut is hand-selected for quality. We take pride in offering only the finest meats to our customers.",
+      "Our head butcher, John MacLeod, with over 20 years of experience, personally hand-selects every cut, ensuring only the finest meats reach your table.",
   },
   {
     icon: Users,
     title: "Community Focused",
     description:
-      "We believe in the power of personal service. Know your butcher, know your meat.",
+      "Personal service is a cornerstone of our philosophy, ensuring every customer feels valued. Know your butcher, know your meat.",
   },
   {
     icon: Leaf,

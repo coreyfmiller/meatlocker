@@ -46,6 +46,67 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${sourceSans.variable} bg-background`}>
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "MacLeod's Meat Locker",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "1930 Rothesay Rd",
+                  "addressLocality": "Rothesay",
+                  "addressRegion": "NB",
+                  "postalCode": "E2H 2J6",
+                  "addressCountry": "CA"
+                },
+                "telephone": "+15065520429",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    "opens": "10:00",
+                    "closes": "18:00"
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Sunday",
+                    "opens": "10:00",
+                    "closes": "14:00"
+                  }
+                ],
+                "url": "https://www.macleodsmeats.com",
+                "image": "https://www.macleodsmeats.com/logo.jpg",
+                "priceRange": "$$",
+                "servesCuisine": "Butcher Shop",
+                "sameAs": [
+                  "https://www.facebook.com/profile.php?id=61571316334471",
+                  "https://www.instagram.com/macleodsmeatlocker/"
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.macleodsmeats.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Our Selection",
+                    "item": "https://www.macleodsmeats.com/#products"
+                  }
+                ]
+              }
+            ])
+          }}
+        />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

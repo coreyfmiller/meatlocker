@@ -22,7 +22,7 @@ export function ContactSection() {
             Stop By Today
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            We&apos;d love to see you at our shop. Come on in, meet the team, 
+            We&apos;d love to see you at our shop. Come on in, meet the team,
             and let us help you find the perfect cut.
           </p>
         </div>
@@ -107,13 +107,13 @@ export function ContactSection() {
           {/* Map Placeholder / Note about deals */}
           <div className="space-y-6">
             <div className="aspect-[4/3] rounded-sm bg-muted overflow-hidden border border-border relative">
-              <iframe 
-                src="https://maps.google.com/maps?q=1930%20Rothesay%20Rd,%20Rothesay,%20NB%20E2H%202J6&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+              <iframe
+                src="https://maps.google.com/maps?q=1930%20Rothesay%20Rd,%20Rothesay,%20NB%20E2H%202J6&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0"
               ></iframe>
@@ -124,7 +124,7 @@ export function ContactSection() {
                 Daily Specials
               </h3>
               <p className="text-muted-foreground text-sm">
-                Check our in-store blackboard for today&apos;s deals and specials. 
+                Check our in-store blackboard for today&apos;s deals and specials.
                 We update it daily with fresh offerings and seasonal favorites!
               </p>
             </div>
