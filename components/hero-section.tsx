@@ -31,7 +31,7 @@ export function HeroSection() {
             </p>
 
             {/* Quick Info — two columns */}
-            <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-4 max-w-sm justify-center lg:justify-start mx-auto lg:mx-0">
+            <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 max-w-md justify-center lg:justify-start mx-auto lg:mx-0">
               {/* Left: Address + Phone */}
               <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-3 text-foreground/80">
@@ -39,8 +39,8 @@ export function HeroSection() {
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div className="text-left">
-                    <p className="text-sm font-medium">1930 Rothesay Rd</p>
-                    <p className="text-sm text-muted-foreground">Rothesay, NB E2H 2J6</p>
+                    <p className="text-sm font-medium whitespace-nowrap">1930 Rothesay Rd</p>
+                    <p className="text-sm text-muted-foreground whitespace-nowrap">Rothesay, NB E2H 2J6</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 text-foreground/80">
@@ -73,7 +73,7 @@ export function HeroSection() {
                     ].map((item) => (
                       <li key={item.day} className="flex gap-3">
                         <span className="inline-block w-20 font-medium">{item.day}</span>
-                        <span className={item.hours === "CLOSED" ? "text-primary font-semibold" : ""}>{item.hours}</span>
+                        <span className={`whitespace-nowrap ${item.hours === "CLOSED" ? "text-primary font-semibold" : ""}`}>{item.hours}</span>
                       </li>
                     ))}
                   </ul>
