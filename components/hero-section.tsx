@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { MapPin, Clock } from "lucide-react"
+import { MapPin, Clock, Phone } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -31,23 +31,32 @@ export function HeroSection() {
             </p>
 
             {/* Quick Info */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+            <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-6 justify-center lg:justify-start">
               <div className="flex items-center gap-3 text-foreground/80">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-medium">123 Main Street</p>
-                  <p className="text-sm text-muted-foreground">Downtown</p>
+                  <p className="text-sm font-medium">1930 Rothesay Rd</p>
+                  <p className="text-sm text-muted-foreground">Rothesay, NB E2H 2J6</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-foreground/80">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
+                  <Phone className="h-5 w-5 text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-medium">(506) 552-0429</p>
+                  <p className="text-sm text-muted-foreground">Call us</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 text-foreground/80">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
                   <Clock className="h-5 w-5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-medium">Mon-Sat: 8am - 6pm</p>
-                  <p className="text-sm text-muted-foreground">Closed Sundays</p>
+                  <p className="text-sm font-medium">Tue-Sat: 10am - 6pm</p>
+                  <p className="text-sm text-muted-foreground">Sun: 10am - 2pm | Mon: Closed</p>
                 </div>
               </div>
             </div>
@@ -69,31 +78,17 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Logo and Heritage Building */}
-          <div className="order-1 lg:order-2 flex flex-col items-center gap-8">
-            {/* Large Logo Display */}
-            <div className="w-full max-w-md">
+          {/* Logo */}
+          <div className="order-1 lg:order-2 flex flex-col items-center justify-center gap-8">
+            <div className="w-full max-w-lg lg:max-w-xl">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-lXwbsFUesfpSWj3fZtSFfF7bVvv51J.png"
                 alt="MacLeod's Meat Locker - Est. 2024"
-                width={500}
-                height={500}
+                width={800}
+                height={800}
                 className="w-full h-auto rounded-sm shadow-2xl"
                 priority
               />
-            </div>
-            
-            {/* Heritage Building - Desktop Only */}
-            <div className="hidden lg:block relative w-full max-w-sm">
-              <div className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-xl border-4 border-card">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-YHn1SlHcUHixqokTBOFIkeL4NSRW2a.png"
-                  alt="MacLeod's Meat Locker heritage storefront"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <p className="text-center mt-3 text-sm text-muted-foreground italic">Our heritage storefront</p>
             </div>
           </div>
         </div>

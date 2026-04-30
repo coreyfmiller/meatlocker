@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Facebook, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -11,10 +12,20 @@ export function Footer() {
               <span className="font-serif text-2xl font-bold">MacLeod&apos;s</span>
               <span className="block text-xs tracking-widest uppercase opacity-80">Meat Locker</span>
             </div>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+            <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
               Quality meats and old-fashioned service in our heritage storefront. 
               Your trusted neighborhood butcher since 2024.
             </p>
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com/profile.php?id=61571316334471" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/macleodsmeatlocker/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -43,11 +54,11 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg font-bold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li>123 Main Street</li>
-              <li>Downtown, State 12345</li>
+              <li>1930 Rothesay Rd</li>
+              <li>Rothesay, NB E2H 2J6</li>
               <li>
-                <a href="tel:+15551234567" className="hover:text-primary-foreground transition-colors">
-                  (555) 123-4567
+                <a href="tel:+15065520429" className="hover:text-primary-foreground transition-colors">
+                  (506) 552-0429
                 </a>
               </li>
               <li>

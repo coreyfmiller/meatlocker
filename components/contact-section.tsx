@@ -1,13 +1,13 @@
 import { MapPin, Phone, Clock, Mail } from "lucide-react"
 
 const hours = [
-  { day: "Monday", hours: "8:00 AM - 6:00 PM" },
-  { day: "Tuesday", hours: "8:00 AM - 6:00 PM" },
-  { day: "Wednesday", hours: "8:00 AM - 6:00 PM" },
-  { day: "Thursday", hours: "8:00 AM - 6:00 PM" },
-  { day: "Friday", hours: "8:00 AM - 6:00 PM" },
-  { day: "Saturday", hours: "8:00 AM - 4:00 PM" },
-  { day: "Sunday", hours: "Closed" },
+  { day: "Monday", hours: "Closed" },
+  { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
+  { day: "Wednesday", hours: "10:00 AM - 6:00 PM" },
+  { day: "Thursday", hours: "10:00 AM - 6:00 PM" },
+  { day: "Friday", hours: "10:00 AM - 6:00 PM" },
+  { day: "Saturday", hours: "10:00 AM - 6:00 PM" },
+  { day: "Sunday", hours: "10:00 AM - 2:00 PM" },
 ]
 
 export function ContactSection() {
@@ -39,8 +39,8 @@ export function ContactSection() {
                   Address
                 </h3>
                 <p className="text-muted-foreground">
-                  123 Main Street<br />
-                  Downtown, State 12345
+                  1930 Rothesay Rd<br />
+                  Rothesay, NB E2H 2J6
                 </p>
               </div>
             </div>
@@ -54,10 +54,10 @@ export function ContactSection() {
                   Phone
                 </h3>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+15065520429"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  (555) 123-4567
+                  (506) 552-0429
                 </a>
               </div>
             </div>
@@ -106,24 +106,17 @@ export function ContactSection() {
 
           {/* Map Placeholder / Note about deals */}
           <div className="space-y-6">
-            <div className="aspect-[4/3] rounded-sm bg-muted flex items-center justify-center border border-border">
-              <div className="text-center p-8">
-                <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                <p className="font-serif text-xl font-bold text-foreground mb-2">
-                  Find Us Downtown
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  123 Main Street
-                </p>
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-sm bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  Get Directions
-                </a>
-              </div>
+            <div className="aspect-[4/3] rounded-sm bg-muted overflow-hidden border border-border relative">
+              <iframe 
+                src="https://maps.google.com/maps?q=1930%20Rothesay%20Rd,%20Rothesay,%20NB%20E2H%202J6&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
+              ></iframe>
             </div>
 
             <div className="p-6 bg-primary/5 rounded-sm border border-primary/20">

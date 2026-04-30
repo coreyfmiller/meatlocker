@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X, Phone } from "lucide-react"
 
 const navLinks = [
@@ -17,10 +18,16 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Text Logo */}
-          <Link href="/" className="flex flex-col leading-none">
-            <span className="font-serif text-xl font-bold tracking-tight">MacLeod&apos;s</span>
-            <span className="text-xs tracking-widest uppercase opacity-80">Meat Locker</span>
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/logo.jpg" 
+              alt="MacLeod's Meat Locker" 
+              width={200} 
+              height={60} 
+              className="h-12 w-auto object-contain rounded-sm"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,11 +42,11 @@ export function Header() {
               </Link>
             ))}
             <a
-              href="tel:+15551234567"
+              href="tel:+15065520429"
               className="inline-flex items-center gap-2 rounded-sm bg-primary-foreground px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary-foreground/90"
             >
               <Phone className="h-4 w-4" />
-              (555) 123-4567
+              (506) 552-0429
             </a>
           </div>
 
@@ -73,11 +80,11 @@ export function Header() {
                 </Link>
               ))}
               <a
-                href="tel:+15551234567"
+                href="tel:+15065520429"
                 className="inline-flex items-center justify-center gap-2 rounded-sm bg-primary-foreground px-4 py-2.5 text-base font-semibold text-primary transition-colors hover:bg-primary-foreground/90 mt-2"
               >
                 <Phone className="h-4 w-4" />
-                (555) 123-4567
+                (506) 552-0429
               </a>
             </div>
           </div>
