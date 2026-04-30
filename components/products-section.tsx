@@ -74,10 +74,10 @@ export function ProductsSection() {
             custom requests. Just give us a call or stop by to discuss your needs.
           </p>
           <a
-            href="tel:+15551234567"
-            className="inline-flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            href="tel:+15065520429"
+            className="inline-flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90 mt-auto"
           >
-            Call to Order: (555) 123-4567
+            Call to Order: (506) 552-0429
           </a>
         </div>
       </div>

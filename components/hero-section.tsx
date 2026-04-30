@@ -10,7 +10,7 @@ export function HeroSection() {
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-YHn1SlHcUHixqokTBOFIkeL4NSRW2a.png"
           alt="MacLeod's Meat Locker storefront"
           fill
-          className="object-cover object-center opacity-15"
+          className="object-cover object-center opacity-25"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
