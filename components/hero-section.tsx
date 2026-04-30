@@ -30,10 +30,10 @@ export function HeroSection() {
               neighborhood butchers a cornerstone of the community.
             </p>
 
-            {/* Quick Info */}
-            <div className="mt-10 flex flex-col gap-6 justify-center lg:justify-start">
-              {/* Address + Phone row */}
-              <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center lg:justify-start">
+            {/* Quick Info — two columns */}
+            <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-4 max-w-sm justify-center lg:justify-start mx-auto lg:mx-0">
+              {/* Left: Address + Phone */}
+              <div className="flex flex-col gap-5">
                 <div className="flex items-center gap-3 text-foreground/80">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
                     <MapPin className="h-5 w-5 text-primary" />
@@ -54,8 +54,8 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Hours — full list */}
-              <div className="flex items-start gap-3 text-foreground/80 justify-center lg:justify-start">
+              {/* Right: Hours */}
+              <div className="flex items-start gap-3 text-foreground/80">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0 mt-1">
                   <Clock className="h-5 w-5 text-primary" />
                 </div>
@@ -71,8 +71,8 @@ export function HeroSection() {
                       { day: "Saturday",  hours: "10 - 6 PM" },
                       { day: "Sunday",    hours: "10 - 2 PM" },
                     ].map((item) => (
-                      <li key={item.day} className="flex gap-4">
-                        <span className="inline-block w-24 font-medium">{item.day}</span>
+                      <li key={item.day} className="flex gap-3">
+                        <span className="inline-block w-20 font-medium">{item.day}</span>
                         <span className={item.hours === "CLOSED" ? "text-primary font-semibold" : ""}>{item.hours}</span>
                       </li>
                     ))}
