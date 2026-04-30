@@ -15,9 +15,7 @@ export function HeritageSection() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-sm shadow-lg">
-              <p className="font-serif text-lg font-bold">Est. 1946</p>
-            </div>
+
           </div>
 
           {/* History Content */}
