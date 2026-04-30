@@ -31,32 +31,52 @@ export function HeroSection() {
             </p>
 
             {/* Quick Info */}
-            <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-6 justify-center lg:justify-start">
-              <div className="flex items-center gap-3 text-foreground/80">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
-                  <MapPin className="h-5 w-5 text-primary" />
+            <div className="mt-10 flex flex-col gap-6 justify-center lg:justify-start">
+              {/* Address + Phone row */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center lg:justify-start">
+                <div className="flex items-center gap-3 text-foreground/80">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-sm font-medium">1930 Rothesay Rd</p>
+                    <p className="text-sm text-muted-foreground">Rothesay, NB E2H 2J6</p>
+                  </div>
                 </div>
-                <div className="text-left">
-                  <p className="text-sm font-medium">1930 Rothesay Rd</p>
-                  <p className="text-sm text-muted-foreground">Rothesay, NB E2H 2J6</p>
+                <div className="flex items-center gap-3 text-foreground/80">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
+                    <Phone className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-sm font-medium">(506) 552-0429</p>
+                    <p className="text-sm text-muted-foreground">Call us</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3 text-foreground/80">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <div className="text-left">
-                  <p className="text-sm font-medium">(506) 552-0429</p>
-                  <p className="text-sm text-muted-foreground">Call us</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 text-foreground/80">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0">
+
+              {/* Hours — full list */}
+              <div className="flex items-start gap-3 text-foreground/80 justify-center lg:justify-start">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 shrink-0 mt-1">
                   <Clock className="h-5 w-5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-medium">Tue-Sat: 10am - 6pm</p>
-                  <p className="text-sm text-muted-foreground">Sun: 10am - 2pm | Mon: Closed</p>
+                  <p className="text-xs font-bold uppercase tracking-widest mb-2">Summer Hours</p>
+                  <ul className="space-y-1 text-xs uppercase tracking-wider text-muted-foreground">
+                    {[
+                      { day: "Monday",    hours: "CLOSED" },
+                      { day: "Tuesday",   hours: "10 - 6 PM" },
+                      { day: "Wednesday", hours: "10 - 6 PM" },
+                      { day: "Thursday",  hours: "10 - 6 PM" },
+                      { day: "Friday",    hours: "10 - 6 PM" },
+                      { day: "Saturday",  hours: "10 - 6 PM" },
+                      { day: "Sunday",    hours: "10 - 2 PM" },
+                    ].map((item) => (
+                      <li key={item.day} className="flex gap-4">
+                        <span className="inline-block w-24 font-medium">{item.day}</span>
+                        <span className={item.hours === "CLOSED" ? "text-primary font-semibold" : ""}>{item.hours}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
