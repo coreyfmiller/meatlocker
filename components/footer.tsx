@@ -72,7 +72,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-sm text-primary-foreground/50">
-            &copy; {new Date().getFullYear()} MacLeod&apos;s Meat Locker. All rights reserved.
+            &copy; {new Date().getFullYear()}{" "}MacLeod&apos;s Meat Locker. All rights reserved.
           </p>
         </div>
       </div>
